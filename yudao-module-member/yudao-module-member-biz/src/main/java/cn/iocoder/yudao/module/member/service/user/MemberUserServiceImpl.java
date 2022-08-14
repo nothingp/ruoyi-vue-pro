@@ -68,6 +68,7 @@ public class MemberUserServiceImpl implements MemberUserService {
         // 插入用户
         MemberUserDO user = new MemberUserDO();
         user.setMobile(mobile);
+        user.setNickname(mobile);
         user.setStatus(CommonStatusEnum.ENABLE.getStatus()); // 默认开启
         user.setPassword(encodePassword(password)); // 加密密码
         user.setRegisterIp(registerIp);

@@ -12,7 +12,7 @@ import java.time.Duration;
 @Data
 public class CaptchaProperties {
 
-    private static final Boolean ENABLE_DEFAULT = true;
+    private static final Boolean ENABLE_DEFAULT = false;
 
     /**
      * 是否开启

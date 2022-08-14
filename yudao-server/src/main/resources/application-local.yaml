@@ -44,25 +44,25 @@ spring:
       primary: master
       datasource:
         master:
-          name: ruoyi-vue-pro
+          name: ruoyi-vue-pro-new
           url: jdbc:mysql://127.0.0.1:3306/${spring.datasource.dynamic.datasource.master.name}?allowMultiQueries=true&useUnicode=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&autoReconnect=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
 #          url: jdbc:mysql://127.0.0.1:3306/${spring.datasource.dynamic.datasource.master.name}?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=CTT # MySQL Connector/J 5.X 连接的示例
 #          url: jdbc:postgresql://127.0.0.1:5432/${spring.datasource.dynamic.datasource.slave.name} # PostgreSQL 连接的示例
 #          url: jdbc:oracle:thin:@127.0.0.1:1521:xe # Oracle 连接的示例
 #          url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=${spring.datasource.dynamic.datasource.master.name} # SQLServer 连接的示例
           username: root
-          password: 123456
+          password: judy84711
 #          username: sa
 #          password: JSm:g(*%lU4ZAkz06cd52KqT3)i1?H7W
         slave: # 模拟从库，可根据自己需要修改
-          name: ruoyi-vue-pro
+          name: ruoyi-vue-pro-new
           url: jdbc:mysql://127.0.0.1:3306/${spring.datasource.dynamic.datasource.slave.name}?allowMultiQueries=true&useUnicode=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&autoReconnect=true&nullCatalogMeansCurrent=true # MySQL Connector/J 8.X 连接的示例
 #          url: jdbc:mysql://127.0.0.1:3306/${spring.datasource.dynamic.datasource.slave.name}?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=CTT # MySQL Connector/J 5.X 连接的示例
 #          url: jdbc:postgresql://127.0.0.1:5432/${spring.datasource.dynamic.datasource.slave.name} # PostgreSQL 连接的示例
 #          url: jdbc:oracle:thin:@127.0.0.1:1521:xe # Oracle 连接的示例
 #          url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=${spring.datasource.dynamic.datasource.slave.name} # SQLServer 连接的示例
           username: root
-          password: 123456
+          password: judy84711
 #          username: sa
 #          password: JSm:g(*%lU4ZAkz06cd52KqT3)i1?H7W
 
@@ -173,6 +173,7 @@ logging:
     cn.iocoder.yudao.module.system.dal.mysql: debug
     cn.iocoder.yudao.module.tool.dal.mysql: debug
     cn.iocoder.yudao.module.member.dal.mysql: debug
+    cn.iocoder.yudao.module.lowcode.dal.mysql: debug
 
 --- #################### 微信公众号、小程序相关配置 ####################
 wx:
@@ -185,8 +186,8 @@ wx:
       key-prefix: wx # Redis Key 的前缀 TODO 芋艿：解决下 Redis key 管理的配置
       http-client-type: HttpClient # 采用 HttpClient 请求微信公众号平台
   miniapp: # 小程序配置（必填），参见 https://github.com/Wechat-Group/WxJava/blob/develop/spring-boot-starters/wx-java-miniapp-spring-boot-starter/README.md 文档
-    appid: wx63c280fe3248a3e7
-    secret: 6f270509224a7ae1296bbf1c8cb97aed
+    appid: wxe24ae4341757dd1a
+    secret: 237d1059712978036223b25627db78cc
     config-storage:
       type: RedisTemplate # 采用 RedisTemplate 操作 Redis，会自动从 Spring 中获取
       key-prefix: wa # Redis Key 的前缀 TODO 芋艿：解决下 Redis key 管理的配置
@@ -197,7 +198,7 @@ wx:
 # 芋道配置项，设置当前项目所有自定义的配置
 yudao:
   captcha:
-    enable: false # 本地环境，暂时关闭图片验证码，方便登录等接口的测试
+    enable: true # 本地环境，暂时关闭图片验证码，方便登录等接口的测试
   security:
     mock-enable: true
   xss:
