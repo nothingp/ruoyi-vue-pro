@@ -8,6 +8,6 @@ ADD conf/gzip.conf /etc/nginx/conf.d/gzip.conf
 
 RUN mkdir /app
 WORKDIR /app
-ADD dist/ /app/admin
+ADD dist/ /app/admin-ruoyi
 
 CMD ["nginx", "-g", "daemon off;"]
