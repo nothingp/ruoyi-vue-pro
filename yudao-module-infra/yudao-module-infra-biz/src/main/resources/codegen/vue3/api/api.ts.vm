@@ -20,7 +20,7 @@ export const create${simpleClassName}Api = async (data: ${simpleClassName}VO) =>
 }
 
 // 修改${table.classComment}
-export const updatePostApi = async (data: ${simpleClassName}VO) => {
+export const update${simpleClassName}Api = async (data: ${simpleClassName}VO) => {
     return await request.put({ url: '${baseURL}/update', data })
 }
 
