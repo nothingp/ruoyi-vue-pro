@@ -1,4 +1,4 @@
-export type LowcodeProjectVO = {
+export type ProjectVO = {
   id: string
   userId: number
   name: string
@@ -10,7 +10,7 @@ export type LowcodeProjectVO = {
   pages: string
 }
 
-export type LowcodeProjectPageReqVO = {
+export type ProjectPageReqVO = {
   userId: number
   name: string
   type: string
@@ -19,9 +19,10 @@ export type LowcodeProjectPageReqVO = {
   logo: string
   cover: string
   pages: string
+  createTime: date
 }
 
-export type LowcodeProjectExcelReqVO = {
+export type ProjectExcelReqVO = {
   userId: number
   name: string
   type: string
@@ -30,4 +31,5 @@ export type LowcodeProjectExcelReqVO = {
   logo: string
   cover: string
   pages: string
+  createTime: date
 }
