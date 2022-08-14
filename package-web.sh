@@ -3,5 +3,5 @@
 basepath=`pwd`
 
 
-cd $basepath/ruoyi-ui && npm install && npm run build:prod && mv dist docker/
+cd $basepath/yudao-ui-admin && npm install && npm run build:prod && mv dist docker/
 
