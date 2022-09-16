@@ -173,7 +173,6 @@ logging:
     cn.iocoder.yudao.module.system.dal.mysql: debug
     cn.iocoder.yudao.module.tool.dal.mysql: debug
     cn.iocoder.yudao.module.member.dal.mysql: debug
-    cn.iocoder.yudao.module.lowcode.dal.mysql: debug
 
 --- #################### 微信公众号、小程序相关配置 ####################
 wx:
@@ -198,7 +197,7 @@ wx:
 # 芋道配置项，设置当前项目所有自定义的配置
 yudao:
   captcha:
-    enable: true # 本地环境，暂时关闭图片验证码，方便登录等接口的测试
+    enable: false # 本地环境，暂时关闭图片验证码，方便登录等接口的测试
   security:
     mock-enable: true
   xss:
